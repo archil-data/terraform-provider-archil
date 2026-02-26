@@ -16,7 +16,7 @@ The provider requires an API key, which can be set in the provider configuration
 ```hcl
 provider "archil" {
   api_key = var.archil_api_key
-  region  = "us-east-1"
+  region  = "aws-us-east-1"
 }
 ```
 
@@ -32,7 +32,7 @@ terraform {
 }
 
 provider "archil" {
-  region = "us-east-1"
+  region = "aws-us-east-1"
 }
 
 resource "archil_disk" "main" {
@@ -60,5 +60,5 @@ resource "archil_disk_user" "ci" {
 ## Argument Reference
 
 - `api_key` (String, Sensitive) - API key for Archil. Can also be set via `ARCHIL_API_KEY`.
-- `region` (String) - Archil region. Can also be set via `ARCHIL_REGION`. Default: `us-east-1`. Valid regions: `us-east-1`, `eu-west-1`, `us-west-2`, `us-central1`.
+- `region` (String) - Archil region. Can also be set via `ARCHIL_REGION`. Default: `aws-us-east-1`. Valid regions: `aws-us-east-1`, `aws-eu-west-1`, `aws-us-west-2`, `gcp-us-central1`.
 - `endpoint` (String) - Override the API endpoint URL. Can also be set via `ARCHIL_ENDPOINT`.
